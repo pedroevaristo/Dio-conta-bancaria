@@ -1,8 +1,9 @@
 #Singleton
+from Model.bank_account import person
 class connection:
     _instance = None
     size_list =[]
-
+    #verificar se existe uma nova instancia 
     def __new__(cls, *args, **kwargs):
         if not cls._instance:
             cls._instance = super().__new__(cls, *args, **kwargs)
@@ -10,10 +11,10 @@ class connection:
         return cls._instance
 
     #daqui apra baixo é "crud"
-    def addInfor(self, name, valueMoney):
-        self.size_list.append(name, valueMoney)
+    def add_Infor(self, person):
+        self.size_list.append(person)
 
-    def get_added_Information(self):
+    def get_Extract(self):
         return self.size_list
     
     ''''def remove_added_Information(self, id):

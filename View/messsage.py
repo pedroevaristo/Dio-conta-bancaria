@@ -1,14 +1,17 @@
 import main
+from Model.receive_Options import Options_From_View
 
 def main():
+    
     option = input('''Seja bem-vindo ao The Bank 
     \n Selecione as opções abaixo ?
-    \n 1- adicionar usuário 2- ver o extrato 3- depositar 4- sacar''')
+    \n  1- ver o extrato 2- depositar 3- sacar''')
     
     match option:
         case"1":
-            
+            Options_From_View.View_Extract()
         case"2":
-
+            Options_From_View.puting_Information()
         case"3":
+            Options_From_View.taking_Withdraw()
 
