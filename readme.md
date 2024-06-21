@@ -11,3 +11,6 @@ Saque:
     
 Extrato:
     Vizualizar as informações dos depositos e saques. Formatação de R$
+--------------
+
+Fazer depois o login para cada usuário

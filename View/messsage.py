@@ -11,7 +11,7 @@ def main():
         case"1":
             Options_From_View.View_Extract()
         case"2":
-            Options_From_View.puting_Information()
+            Options_From_View.putting_Information_Of_Depositing()
         case"3":
             Options_From_View.taking_Withdraw()
 

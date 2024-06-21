@@ -1,22 +1,21 @@
-#Singleton
+
 from Model.bank_account import person
-class connection:
+class connection:#Singleton connection
     _instance = None
-    size_list =[]
-    #verificar se existe uma nova instancia 
-    def __new__(cls, *args, **kwargs):
-        if not cls._instance:
-            cls._instance = super().__new__(cls, *args, **kwargs)
-            
-        return cls._instance
-
-    #daqui apra baixo é "crud"
-    def add_Infor(self, person):
-        self.size_list.append(person)
-
-    def get_Extract(self):
-        return self.size_list
+    _connection = None
     
+    def __new__(cls, *args, **kwargs):
+        if cls._instance is None:
+            cls._instance = super(connection, cls).__new__(cls, *args, **kwargs)
+        return cls._instance
+    
+    def Connection_With_Database(self):
+        if not list_Account:
+            self.Connection_With_Database = list_Account = []
+        return self.Connection_With_Database
+
+
+
     ''''def remove_added_Information(self, id):
         if id in self.size_list:
             self.size_list.remove(id)'''
