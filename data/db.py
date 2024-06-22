@@ -1,26 +1,22 @@
-
 from typing import Any
 from Model.bank_account import person
-class connection:#Singleton connection
+
+class Connection: #Singleton connection
     _instance = None
-    _connection = None
-    def __call__(self, *args, **kwds):
-
+    def __new__(cls, *args, **kwargs):
         if cls._instance is None:
-            cls._instance = super(connection, cls).__call__(cls, *args, **kwargs)
+            cls._instance = super(Connection, cls).__new__(cls, *args, **kwargs)
         return cls._instance
+
     
-class Connection_With_Database(metaclass=connection):
-   _connection=None
-   def connection(self):
-        if not list_Account:
-            self.Connection_With_Database = list_Account = []
-            self.Connection_With_Database = transactions_ = {}
-        return self.Connection_With_Database
+class Database(Connection):
+    def __init__(self):
+        super().__init__()
+        self.transactions = []
 
-    #def transfering_Money:
-        
-
-    ''''def remove_added_Information(self, id):
-        if id in self.size_list:
-            self.size_list.remove(id)'''
+    def Add_Transaction(self, name, transaction_Money):
+        transaction = {"name": name, "transaction_money": transaction_Money}
+        return self.transactions.append(transaction)
+    
+    def get_All_Transactions(self, transaction ):
+        return self.transactions

@@ -1,5 +1,5 @@
 import main
-from Model.receive_Options import Options_From_View
+from Controller import deposit, extract, withdraw
 
 def main():
     
@@ -9,9 +9,10 @@ def main():
     
     match option:
         case"1":
-            Options_From_View.View_Extract()
+            deposit.depositing_In_Account()
         case"2":
-            Options_From_View.putting_Information_Of_Depositing()
+            extract._Information_Of_Account()
         case"3":
-            Options_From_View.taking_Withdraw()
+            withdraw.taking_Withdraw()
+            
 

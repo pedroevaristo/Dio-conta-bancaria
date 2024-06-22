@@ -1,7 +1,6 @@
-class person:
-
-    balance = 0
-    def __init__(self, name, balance):
+class Person:
+    
+    def __init__(self, name, balance=0):
         self.name = name
         self.balance = balance
 

@@ -1,6 +1,6 @@
 #interface metodo abstrato
 from abc import ABC, abstractmethod
-import bank_account
+# resolver o rpoblem de chamar o metedo abstrato para implementar na concreta
 
 class functions(ABC):
     @abstractmethod
