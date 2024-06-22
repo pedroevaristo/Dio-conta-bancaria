@@ -1,6 +1,3 @@
-from typing import Any
-from Model.bank_account import person
-
 class Connection: #Singleton connection
     _instance = None
     def __new__(cls, *args, **kwargs):

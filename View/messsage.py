@@ -1,4 +1,3 @@
-import main
 from Controller import deposit, extract, withdraw
 
 def main():
